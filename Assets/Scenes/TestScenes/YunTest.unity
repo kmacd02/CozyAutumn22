@@ -286,7 +286,7 @@ MonoBehaviour:
   m_AssetsPPU: 32
   m_RefResolutionX: 640
   m_RefResolutionY: 360
-  m_UpscaleRT: 0
+  m_UpscaleRT: 1
   m_PixelSnapping: 1
   m_CropFrameX: 0
   m_CropFrameY: 0
@@ -431,8 +431,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 232366430, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 232366431, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
       propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 232366431, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1475057744, guid: d2b4421e58aaa48cb83c87b1402cb974, type: 3}
+    - target: {fileID: 281287621, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 630647663, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
@@ -442,6 +454,10 @@ PrefabInstance:
     - target: {fileID: 630647663, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 630647664, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7889877629460728768, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
       propertyPath: m_RootOrder
