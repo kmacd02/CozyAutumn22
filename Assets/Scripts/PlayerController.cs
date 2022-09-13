@@ -6,11 +6,12 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Animator animator;
+    private Lantern lantern;
 
     public Vector2 Direction => dir;
     private Vector2 dir = Vector2.zero;
-
-    private Lantern lantern;
+    private bool attacking = false;
     
     [SerializeField] private float speed = 5f;
     
@@ -20,29 +21,41 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         lantern = GetComponentInChildren<Lantern>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        animator.SetFloat("DirX", Direction.x);
+        if (attacking)
+        {
+            rb.velocity = new Vector2(transform.localScale.x * -1 * speed * 0.05f, 0);
+        }
+        else
+        {
+            rb.velocity = dir * speed;
+        }
     }
 
     public void OnMove(InputValue input)
     {
         dir = input.Get<Vector2>();
-        rb.velocity = dir * speed;
     }
 
     public void OnAttack(InputValue input)
     {
+        if(attacking) return;
+
         lantern.toggleWeapon(true);
-        StartCoroutine(testOnlyStopAttack());
+        animator.SetTrigger("Attack");
+        attacking = true;
     }
 
-    IEnumerator testOnlyStopAttack()
+    public void EndAttack()
     {
-        yield return new WaitForSeconds(0.2f);
         lantern.toggleWeapon(false);
+        animator.ResetTrigger("Attack");
+        attacking = false;
     }
 }

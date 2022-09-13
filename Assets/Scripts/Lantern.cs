@@ -19,15 +19,13 @@ public class Lantern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pc.Direction.magnitude is > 0 and <= 1)
-        {
-            transform.localPosition = pc.Direction;
-        }
+        
     }
 
     public void toggleWeapon(bool b)
     {
         hitbox.enabled = b;
+        if(b == false) hits.Clear();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -38,6 +36,7 @@ public class Lantern : MonoBehaviour
         if (l != null)
         {
             l.light();
+            hits.Add(col.gameObject);
         }
     }
 }
