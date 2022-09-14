@@ -43,14 +43,19 @@ public class PlayerController : MonoBehaviour
     {
         dir = input.Get<Vector2>();
     }
-
+    
+    #region Attack
     public void OnAttack(InputValue input)
     {
         if(attacking) return;
-
-        lantern.toggleWeapon(true);
+        
         animator.SetTrigger("Attack");
         attacking = true;
+    }
+
+    public void BeginAttack()
+    {
+        lantern.toggleWeapon(true);
     }
 
     public void EndAttack()
@@ -59,4 +64,5 @@ public class PlayerController : MonoBehaviour
         animator.ResetTrigger("Attack");
         attacking = false;
     }
+    #endregion
 }

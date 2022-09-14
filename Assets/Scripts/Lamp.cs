@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Lamp : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem sparks;
+    [SerializeField] private GameObject light;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +19,11 @@ public class Lamp : MonoBehaviour
         
     }
 
-    public void light()
+    public void Light()
     {
         Debug.Log("lit");
+        sparks.Play();
+        GetComponent<Animator>().Play("Lit");
+        light.SetActive(true);
     }
 }

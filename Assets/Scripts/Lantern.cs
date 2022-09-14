@@ -35,7 +35,7 @@ public class Lantern : MonoBehaviour
         Lamp l = col.GetComponent<Lamp>();
         if (l != null)
         {
-            l.light();
+            l.Light();
             hits.Add(col.gameObject);
         }
     }
