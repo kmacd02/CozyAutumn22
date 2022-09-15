@@ -7992,7 +7992,7 @@ Transform:
   - {fileID: 1523316141}
   - {fileID: 2014131362}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1005466985
 MonoBehaviour:
@@ -8114,10 +8114,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0.0011534025
-    width: 0.9993511
-    height: 0.9965398
+    x: 0.0007727975
+    y: 0
+    width: 0.9984544
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -8145,13 +8145,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997635006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.42661, y: -0.6794951, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 1829734220}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1997635011
 MonoBehaviour:
@@ -8234,7 +8234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3867318897239185982, guid: a0d0ba951ff91ff4e9e30f22a06f9bcc, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3867318897239185982, guid: a0d0ba951ff91ff4e9e30f22a06f9bcc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8285,6 +8285,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005466984}
     m_Modifications:
+    - target: {fileID: 630647663, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 630647664, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9080944
+      objectReference: {fileID: 0}
+    - target: {fileID: 630647664, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.18675733
+      objectReference: {fileID: 0}
     - target: {fileID: 7889877629460728768, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
       propertyPath: m_RootOrder
       value: 0

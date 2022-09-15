@@ -19,7 +19,8 @@ public class Lantern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Math.Abs(pc.Direction.magnitude - 1) < 0.01f)
+            transform.localPosition = pc.Direction * 0.5f;
     }
 
     public void toggleWeapon(bool b)
