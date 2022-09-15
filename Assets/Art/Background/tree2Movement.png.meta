@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d514da4f653e7bc48bf215efb4f765c4
+guid: 00984015e2173f14ab0738c5fab67d70
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
@@ -52,7 +52,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -114,22 +114,96 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: tree2Movement_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: -32}
+        - {x: -12, y: -26}
+        - {x: 13, y: -26}
+        - {x: 13, y: -32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6eeefe1bedb8243b97b63a9b43962b
+      internalID: -763945965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree2Movement_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: -32}
+        - {x: -12, y: -26}
+        - {x: 13, y: -26}
+        - {x: 13, y: -32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4768b7fdeac1394da6903bd4f0743ae
+      internalID: -211837729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree2Movement_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -12, y: -32}
+        - {x: -12, y: -26}
+        - {x: 13, y: -26}
+        - {x: 13, y: -32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d97ce2d73ea1c449bef42973ff0d66
+      internalID: -1156628207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
-    physicsShape:
-    - - {x: -12, y: -32}
-      - {x: -12, y: -26}
-      - {x: 13, y: -26}
-      - {x: 13, y: -32}
+    physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tree2Movement_0: -763945965
+      tree2Movement_1: -211837729
+      tree2Movement_2: -1156628207
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
