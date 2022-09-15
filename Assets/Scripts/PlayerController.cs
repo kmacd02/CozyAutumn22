@@ -30,7 +30,8 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("DirX", Direction.x);
         if (attacking)
         {
-            rb.velocity = new Vector2(transform.localScale.x * -1 * speed * 0.05f, 0);
+            // rb.velocity = new Vector2(transform.localScale.x * -1 * speed * 0.05f, 0);
+            rb.velocity = Vector2.zero;
         }
         else
         {
@@ -42,14 +43,19 @@ public class PlayerController : MonoBehaviour
     {
         dir = input.Get<Vector2>();
     }
-
+    
+    #region Attack
     public void OnAttack(InputValue input)
     {
         if(attacking) return;
-
-        lantern.toggleWeapon(true);
+        
         animator.SetTrigger("Attack");
         attacking = true;
+    }
+
+    public void BeginAttack()
+    {
+        lantern.toggleWeapon(true);
     }
 
     public void EndAttack()
@@ -58,4 +64,5 @@ public class PlayerController : MonoBehaviour
         animator.ResetTrigger("Attack");
         attacking = false;
     }
+    #endregion
 }
