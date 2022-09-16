@@ -6,23 +6,19 @@ using UnityEngine.Tilemaps;
 
 [CreateAssetMenu]
 public class SpecialRuleTile : RuleTile<SpecialRuleTile.Neighbor> {
-    public TileBase[] mixables ;
+    public TileBase edge;
     
     public class Neighbor : RuleTile.TilingRule.Neighbor
     {
-        
+        public const int Edge = 3;
     }
 
     public override bool RuleMatch(int neighbor, TileBase tile) {
         switch (neighbor) {
-            case Neighbor.This: return CheckMixable(tile);
-            case Neighbor.NotThis: return !CheckMixable(tile);
+            case Neighbor.Edge: return tile == edge;
+            case Neighbor.This: return tile != null;
+            case Neighbor.NotThis: return tile == null;
         }
         return base.RuleMatch(neighbor, tile);
-    }
-
-    bool CheckMixable(TileBase tile)
-    {
-        return tile != null && (tile == this || mixables.Contains(tile));
     }
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eac5baf73699c284194a8421d8311416, type: 3}
-  m_Name: Grass
+  m_Name: GrassGround
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 21300000, guid: 40285732041224f0fb6360f003404f6a, type: 3}
   m_DefaultGameObject: {fileID: 0}
@@ -31,24 +31,6 @@ MonoBehaviour:
     - {x: 0, y: 1, z: 0}
     - {x: 0, y: -1, z: 0}
     m_RuleTransform: 0
-  - m_Id: 0
-    m_Sprites:
-    - {fileID: 21300000, guid: 5d4ad41f1f6a54fdda489b5c09dd664a, type: 3}
-    - {fileID: 21300000, guid: 8dc96fba174c348d399b4ed851c74cd7, type: 3}
-    - {fileID: 21300000, guid: 9995c2e605ff74599b060a979bb4f53b, type: 3}
-    - {fileID: 21300000, guid: 9995c2e605ff74599b060a979bb4f53b, type: 3}
-    - {fileID: 21300000, guid: 9995c2e605ff74599b060a979bb4f53b, type: 3}
-    m_GameObject: {fileID: 0}
-    m_MinAnimationSpeed: 1
-    m_MaxAnimationSpeed: 1
-    m_PerlinScale: 0.5
-    m_Output: 1
-    m_ColliderType: 1
-    m_RandomTransform: 2
-    m_Neighbors: 02000000
-    m_NeighborPositions:
-    - {x: 0, y: -1, z: 0}
-    m_RuleTransform: 0
   - m_Id: 1
     m_Sprites:
     - {fileID: 21300000, guid: b34a6cc0b00144658975bee6cd9c72d5, type: 3}
@@ -59,10 +41,9 @@ MonoBehaviour:
     m_Output: 1
     m_ColliderType: 1
     m_RandomTransform: 0
-    m_Neighbors: 0100000002000000
+    m_Neighbors: 03000000
     m_NeighborPositions:
     - {x: 0, y: -1, z: 0}
-    - {x: 0, y: -2, z: 0}
     m_RuleTransform: 0
   - m_Id: 2
     m_Sprites:
@@ -85,8 +66,4 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
     m_RuleTransform: 0
-  mixables:
-  - {fileID: 11400000, guid: 6213a1440cdce4441a56fd7521b6b742, type: 2}
-  - {fileID: 11400000, guid: 50e267dc384f740219fc51c957b77aa3, type: 2}
-  - {fileID: 11400000, guid: f2f51066bd08a422e9be01f2d4350abb, type: 2}
-  - {fileID: 11400000, guid: 21336057fb75e47909d14079f849d180, type: 2}
+  edge: {fileID: 11400000, guid: a7e153d0e320c7c48a7e9f9ee3af85e6, type: 2}
