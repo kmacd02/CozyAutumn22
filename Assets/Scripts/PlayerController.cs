@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public Vector2 Direction => dir;
     private Vector2 dir = Vector2.zero;
     private bool attacking = false;
+
+    private int health = 5;
     
     [SerializeField] private float speed = 5f;
     
@@ -27,7 +29,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetFloat("DirX", Direction.x);
+        // animator.SetFloat("DirX");
         if (attacking)
         {
             // rb.velocity = new Vector2(transform.localScale.x * -1 * speed * 0.05f, 0);
@@ -42,6 +44,11 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputValue input)
     {
         dir = input.Get<Vector2>();
+    }
+
+    public void DecrementHealth(int damage)
+    {
+        health -= damage;
     }
     
     #region Attack
@@ -64,5 +71,6 @@ public class PlayerController : MonoBehaviour
         animator.ResetTrigger("Attack");
         attacking = false;
     }
+
     #endregion
 }
