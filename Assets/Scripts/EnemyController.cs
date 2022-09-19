@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Pathfinding;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
-using 
 
 public class EnemyController : MonoBehaviour
 {
     private Animator animator;
-    private Transform target;
-    private int DirX;
+    private AIPath aiPath;
+
+    private Vector3 dir;
 
     //private bool attacking = false;
 
@@ -20,14 +20,13 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        //target = GetComponent<AIDestinationSetter>
-        //DirX = GetComponent<>
+        aiPath = GetComponent<AIPath>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        dir = aiPath.desiredVelocity;
     }
 
     //#region Attack
