@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private PlayerController _playerController;
+    public static PlayerController player;
+    
     private List<Lamp> lamps;
 
     public static float time = 0f;
@@ -12,6 +15,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (_playerController != null) player = _playerController;
+        else player = FindObjectOfType<PlayerController>();
+        
         lamps = FindObjectsOfType<Lamp>().ToList();
         Debug.Log(lamps.Count);
     }
