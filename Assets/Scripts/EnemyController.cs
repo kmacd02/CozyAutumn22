@@ -6,10 +6,11 @@ using UnityEngine.InputSystem;
 
 public class EnemyController : MonoBehaviour
 {
-    private Animator animator;
+    [SerializeField] private Animator animator;
     private AIPath aiPath;
 
     private Vector3 dir;
+    private Transform target;
 
     //private bool attacking = false;
 
@@ -19,14 +20,16 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
         aiPath = GetComponent<AIPath>();
+        target = GameManager.player.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
         dir = aiPath.desiredVelocity;
+        animator.SetFloat("DirX", dir.x);
+        
     }
 
     //#region Attack

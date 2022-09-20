@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 126748868}
   - component: {fileID: 126748867}
   - component: {fileID: 126748869}
+  - component: {fileID: 126748870}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -242,6 +243,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 261630337}
+--- !u!114 &126748870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126748865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afad29193d3045b78f4700dade5d7ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 726913834}
 --- !u!1 &141843760
 GameObject:
   m_ObjectHideFlags: 0
@@ -2684,19 +2698,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1997635009, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
       propertyPath: orthographic size
-      value: 6.890625
+      value: 6.25
       objectReference: {fileID: 0}
     - target: {fileID: 1997635009, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0
+      value: 0.00064683054
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997635009, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0.00124533
       objectReference: {fileID: 0}
     - target: {fileID: 1997635009, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 1
+      value: 0.99870634
       objectReference: {fileID: 0}
     - target: {fileID: 1997635009, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.996264
       objectReference: {fileID: 0}
     - target: {fileID: 7889877629460728768, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
       propertyPath: m_RootOrder
@@ -2752,6 +2770,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
+--- !u!114 &591631785 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7889877629460728772, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
+  m_PrefabInstance: {fileID: 591631784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0658cd8ef1a844835931b6ef4a1471f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &596448472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3822,6 +3851,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 141236248842246976, guid: a0d0ba951ff91ff4e9e30f22a06f9bcc, type: 3}
+      propertyPath: _playerController
+      value: 
+      objectReference: {fileID: 591631785}
     - target: {fileID: 3867318897239185921, guid: a0d0ba951ff91ff4e9e30f22a06f9bcc, type: 3}
       propertyPath: m_Name
       value: Game Manager
