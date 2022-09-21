@@ -13,7 +13,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 dir = Vector2.zero;
     private bool attacking = false;
 
+    [SerializeField] private int maxHealth = 5;
     private int health = 5;
+    private int fuelLeft = 100;
     
     [SerializeField] private float speed = 5f;
     
@@ -29,11 +31,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // animator.SetFloat("DirX");
+        animator.SetFloat("DirX", Direction.x);
         if (attacking)
         {
-            // rb.velocity = new Vector2(transform.localScale.x * -1 * speed * 0.05f, 0);
-            rb.velocity = Vector2.zero;
+            rb.velocity = new Vector2(transform.localScale.x * -1 * speed * 0.05f, 0);
         }
         else
         {
@@ -49,6 +50,16 @@ public class PlayerController : MonoBehaviour
     public void DecrementHealth(int damage)
     {
         health -= damage;
+        
+        if (health < 0)
+        {
+            health = 0;
+        }else if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        
+        lantern.updateLight((float) health /maxHealth);
     }
     
     #region Attack

@@ -2,9 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Lantern : MonoBehaviour
 {
+    [SerializeField] private Light2D light;
+    [SerializeField] private float maxRadius;
+    
     private List<GameObject> hits = new List<GameObject>();
     private Collider2D hitbox;
     private PlayerController pc;
@@ -29,6 +33,12 @@ public class Lantern : MonoBehaviour
         if(b == false) hits.Clear();
     }
 
+    public void updateLight(float lightPercentage)
+    {
+        light.pointLightOuterRadius = maxRadius * lightPercentage;
+        light.pointLightInnerRadius = maxRadius * (2f / 5f) * lightPercentage;
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (hits.Contains(col.gameObject)) return;
@@ -37,6 +47,13 @@ public class Lantern : MonoBehaviour
         if (l != null)
         {
             l.Light();
+            hits.Add(col.gameObject);
+        }
+        
+        GasPump g = col.GetComponent<GasPump>();
+        if (g != null)
+        {
+            pc.DecrementHealth(-999);
             hits.Add(col.gameObject);
         }
     }

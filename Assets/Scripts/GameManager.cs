@@ -13,13 +13,18 @@ public class GameManager : MonoBehaviour
     public static float time = 0f;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        if (_playerController != null) player = _playerController;
-        else player = FindObjectOfType<PlayerController>();
+        if (_playerController != null)
+        {
+            player = _playerController;
+        }
+        else
+        {
+            player = FindObjectOfType<PlayerController>();
+        }
         
         lamps = FindObjectsOfType<Lamp>().ToList();
-        Debug.Log(lamps.Count);
     }
 
     // Update is called once per frame

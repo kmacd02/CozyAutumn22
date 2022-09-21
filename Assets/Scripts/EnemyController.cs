@@ -10,7 +10,6 @@ public class EnemyController : MonoBehaviour
     private AIPath aiPath;
 
     private Vector3 dir;
-    private Transform target;
 
     //private bool attacking = false;
 
@@ -21,7 +20,6 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         aiPath = GetComponent<AIPath>();
-        target = GameManager.player.transform;
     }
 
     // Update is called once per frame
