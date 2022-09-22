@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Pathfinding;
@@ -10,11 +11,7 @@ public class EnemyController : MonoBehaviour
     private AIPath aiPath;
 
     private Vector3 dir;
-
-    //private bool attacking = false;
-
-    private int health = 3;
-
+    private bool attacking = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +25,15 @@ public class EnemyController : MonoBehaviour
     {
         dir = aiPath.desiredVelocity;
         animator.SetFloat("DirX", dir.x);
-    }
 
+        if (aiPath.reachedDestination && !attacking)
+        {
+            attacking = true;
+            aiPath.canMove = false;
+            StartCoroutine(Attack());
+        }
+    }
+    
     #region Stun
 
     public void Stun()
@@ -45,15 +49,29 @@ public class EnemyController : MonoBehaviour
     }
 
     #endregion
+    
+    #region Attack
 
-    //#region Attack
-    //public void OnAttack(InputValue input)
-    //{
-    //    if (attacking) return;
+    IEnumerator Attack()
+    {
+        yield return new WaitForSeconds(0f);
+        animator.SetTrigger("Attack");
+    }
 
-    //    animator.SetTrigger("Attack");
-    //    attacking = true;
-    //}
+    public void FinishAttack()
+    {
+        aiPath.canMove = true;
+        attacking = false;
+    }
 
-    //#endregion
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        PlayerController p = col.GetComponent<PlayerController>();
+        if (p != null)
+        {
+            p.DecrementHealth(1);
+        }
+    }
+
+    #endregion
 }

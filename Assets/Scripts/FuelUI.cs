@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FuelScript : MonoBehaviour
+public class FuelUI : MonoBehaviour
 {
     [SerializeField] private Image fuelUI;
     [SerializeField] private Sprite[] sprites;
