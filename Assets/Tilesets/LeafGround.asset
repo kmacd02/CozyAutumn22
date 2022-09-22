@@ -31,6 +31,36 @@ MonoBehaviour:
     - {x: 0, y: 1, z: 0}
     - {x: 0, y: -1, z: 0}
     m_RuleTransform: 0
+  - m_Id: 0
+    m_Sprites:
+    - {fileID: 21300000, guid: 5b8cbff93c9f1ef4d99ea1133d3590bf, type: 3}
+    m_GameObject: {fileID: 0}
+    m_MinAnimationSpeed: 1
+    m_MaxAnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0
+    m_Neighbors: 0300000004000000
+    m_NeighborPositions:
+    - {x: 0, y: -1, z: 0}
+    - {x: -1, y: -1, z: 0}
+    m_RuleTransform: 0
+  - m_Id: 4
+    m_Sprites:
+    - {fileID: 21300000, guid: cbdfdd3cd351a5848b9472fe91b0bd4d, type: 3}
+    m_GameObject: {fileID: 0}
+    m_MinAnimationSpeed: 1
+    m_MaxAnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0
+    m_Neighbors: 0300000004000000
+    m_NeighborPositions:
+    - {x: 0, y: -1, z: 0}
+    - {x: 1, y: -1, z: 0}
+    m_RuleTransform: 0
   - m_Id: 1
     m_Sprites:
     - {fileID: 21300000, guid: 550348707e3d1463aae5b9d149508245, type: 3}
@@ -66,4 +96,7 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
     m_RuleTransform: 0
-  edge: {fileID: 11400000, guid: a7e153d0e320c7c48a7e9f9ee3af85e6, type: 2}
+  edge: {fileID: 11400000, guid: eabccba15a5e93143bca89fdfa7b301d, type: 2}
+  edgeMixables:
+  - {fileID: 11400000, guid: 1b4a7a5b6030a4f47b9ccbaac5f90f59, type: 2}
+  - {fileID: 11400000, guid: b812740887143f0449bc439677c35933, type: 2}
