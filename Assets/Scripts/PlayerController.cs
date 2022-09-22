@@ -15,10 +15,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private int maxHealth = 5;
     private int health = 5;
-    //private int fuelLeft = 100;
     
     [SerializeField] private float speed = 5f;
-    [SerializeField] private FuelScript tank;
     
 
     // Start is called before the first frame update
@@ -42,7 +40,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = dir * speed;
         }
 
-        tank.UpdateSprite(health);
+        GameManager.fuelUI.UpdateSprite(health);
     }
 
     public void OnMove(InputValue input)

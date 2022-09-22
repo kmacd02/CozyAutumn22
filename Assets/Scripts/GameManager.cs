@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerController _playerController;
     public static PlayerController player;
     
+    [SerializeField] private FuelUI _fuelUI;
+    public static FuelUI fuelUI;
+    
     private List<Lamp> lamps;
 
     public static float time = 0f;
@@ -16,15 +19,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if (_playerController != null)
-        {
-            player = _playerController;
-        }
-        else
-        {
-            player = FindObjectOfType<PlayerController>();
-        }
+        if (_playerController != null) player = _playerController;
+        else player = FindObjectOfType<PlayerController>();
         
+        if (_fuelUI != null) fuelUI = _fuelUI;
+        else fuelUI = FindObjectOfType<FuelUI>();
+
         lamps = FindObjectsOfType<Lamp>().ToList();
     }
 
