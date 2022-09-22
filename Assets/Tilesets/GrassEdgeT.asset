@@ -10,29 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d69364ec59822545a995644fbcc7ffb, type: 3}
-  m_Name: Grass Edge
+  m_Name: GrassEdgeT
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: 9995c2e605ff74599b060a979bb4f53b, type: 3}
+  m_DefaultSprite: {fileID: 21300000, guid: 0531c5bf9a892da429fe9867c6e4bac0, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
-  - m_Id: 1
-    m_Sprites:
-    - {fileID: 21300000, guid: 543a217a3057b6c48a68ee103f7c0d28, type: 3}
-    m_GameObject: {fileID: 0}
-    m_MinAnimationSpeed: 1
-    m_MaxAnimationSpeed: 1
-    m_PerlinScale: 0.5
-    m_Output: 0
-    m_ColliderType: 1
-    m_RandomTransform: 0
-    m_Neighbors: 02000000
-    m_NeighborPositions:
-    - {x: -1, y: 0, z: 0}
-    m_RuleTransform: 0
   - m_Id: 0
     m_Sprites:
-    - {fileID: 21300000, guid: 20986eb54c99e724d9ae205b605b792c, type: 3}
+    - {fileID: 21300000, guid: 3ae95274f0e9bef4aa11c4ca9a526f53, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -40,24 +26,36 @@ MonoBehaviour:
     m_Output: 0
     m_ColliderType: 1
     m_RandomTransform: 0
-    m_Neighbors: 02000000
+    m_Neighbors: 0100000001000000
     m_NeighborPositions:
-    - {x: 1, y: 0, z: 0}
+    - {x: 0, y: -1, z: 0}
+    - {x: -1, y: 0, z: 0}
     m_RuleTransform: 0
   - m_Id: 2
     m_Sprites:
-    - {fileID: 21300000, guid: 9995c2e605ff74599b060a979bb4f53b, type: 3}
-    - {fileID: 21300000, guid: 9995c2e605ff74599b060a979bb4f53b, type: 3}
-    - {fileID: 21300000, guid: 9995c2e605ff74599b060a979bb4f53b, type: 3}
-    - {fileID: 21300000, guid: 8dc96fba174c348d399b4ed851c74cd7, type: 3}
-    - {fileID: 21300000, guid: 5d4ad41f1f6a54fdda489b5c09dd664a, type: 3}
+    - {fileID: 21300000, guid: 4b6a11e4c6837ec418cb82ca6e30700f, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
     m_PerlinScale: 0.5
-    m_Output: 1
+    m_Output: 0
     m_ColliderType: 1
-    m_RandomTransform: 2
+    m_RandomTransform: 0
+    m_Neighbors: 0100000001000000
+    m_NeighborPositions:
+    - {x: 0, y: -1, z: 0}
+    - {x: 1, y: 0, z: 0}
+    m_RuleTransform: 0
+  - m_Id: 1
+    m_Sprites:
+    - {fileID: 21300000, guid: 0531c5bf9a892da429fe9867c6e4bac0, type: 3}
+    m_GameObject: {fileID: 0}
+    m_MinAnimationSpeed: 1
+    m_MaxAnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_Output: 0
+    m_ColliderType: 1
+    m_RandomTransform: 0
     m_Neighbors: 
     m_NeighborPositions:
     - {x: -1, y: 1, z: 0}
@@ -70,5 +68,5 @@ MonoBehaviour:
     - {x: 1, y: -1, z: 0}
     m_RuleTransform: 0
   mixables:
-  - {fileID: 11400000, guid: 1b4a7a5b6030a4f47b9ccbaac5f90f59, type: 2}
-  - {fileID: 11400000, guid: b812740887143f0449bc439677c35933, type: 2}
+  - {fileID: 11400000, guid: 2b246d8a4b840d04793559cf96bdc383, type: 2}
+  - {fileID: 11400000, guid: 08f3ff65b05dd0d4ba0a6174055a84c2, type: 2}
