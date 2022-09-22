@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
+    private Animator animator;
     private AIPath aiPath;
 
     private Vector3 dir;
@@ -20,6 +20,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         aiPath = GetComponent<AIPath>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,8 +28,23 @@ public class EnemyController : MonoBehaviour
     {
         dir = aiPath.desiredVelocity;
         animator.SetFloat("DirX", dir.x);
-        
     }
+
+    #region Stun
+
+    public void Stun()
+    {
+        animator.Play("Death");
+        aiPath.canMove = false;
+        GetComponent<Collider2D>().enabled = false;
+    }
+
+    public void Death()
+    {
+        Destroy(gameObject);
+    }
+
+    #endregion
 
     //#region Attack
     //public void OnAttack(InputValue input)

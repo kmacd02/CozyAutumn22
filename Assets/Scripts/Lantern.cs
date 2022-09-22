@@ -56,5 +56,12 @@ public class Lantern : MonoBehaviour
             pc.DecrementHealth(-999);
             hits.Add(col.gameObject);
         }
+        
+        EnemyController e = col.GetComponent<EnemyController>();
+        if (e != null)
+        {
+            e.Stun();
+            hits.Add(col.gameObject);
+        }
     }
 }
