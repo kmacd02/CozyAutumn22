@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class GameManager : MonoBehaviour
     
     private List<Lamp> lamps;
 
-    public static float time = 0f;
+    public static float time = 1920f;
     [SerializeField] private ClockUI clock;
     
     // Start is called before the first frame update
@@ -25,12 +26,20 @@ public class GameManager : MonoBehaviour
         if (_fuelUI != null) fuelUI = _fuelUI;
         else fuelUI = FindObjectOfType<FuelUI>();
 
+        if(clock == null) clock = FindObjectOfType<ClockUI>();
+
         lamps = FindObjectsOfType<Lamp>().ToList();
     }
 
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
+        time -= Time.deltaTime;
+        clock.UpdateSprite((int) Mathf.Floor(time/240));
+
+        if (time < 0)
+        {
+            SceneManager.LoadScene("TimeUp");
+        }
     }
 }

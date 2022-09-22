@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -50,6 +51,12 @@ public class PlayerController : MonoBehaviour
 
     public void DecrementHealth(int damage)
     {
+        if (health == 0 && damage > 0)
+        {
+            SceneManager.LoadScene("Death");
+            return;
+        }
+        
         health -= damage;
         
         if (health < 0)
@@ -61,6 +68,23 @@ public class PlayerController : MonoBehaviour
         }
         
         lantern.updateLight((float) health /maxHealth);
+
+        if (damage > 0) StartCoroutine(DamageFlash());
+        else StartCoroutine(HealFlash());
+    }
+
+    private IEnumerator DamageFlash()
+    {
+        animator.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.0833f);
+        animator.GetComponentInChildren<SpriteRenderer>().color = Color.white;
+    }
+    
+    private IEnumerator HealFlash()
+    {
+        animator.GetComponentInChildren<SpriteRenderer>().color = Color.green;
+        yield return new WaitForSeconds(0.0833f);
+        animator.GetComponentInChildren<SpriteRenderer>().color = Color.white;
     }
     
     #region Attack

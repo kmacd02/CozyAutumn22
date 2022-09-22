@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 52898995ed7cf491bb9e3265c72a356c
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 7a4ceb78561a71a4888e6ee5ad3eabcb
+  - enabled: 1
+    path: Assets/Scenes/TimeUp.unity
+    guid: a39d583c1c6693948a426e60b6b0ddc2
   m_configObjects: {}
