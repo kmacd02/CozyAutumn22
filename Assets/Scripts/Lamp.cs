@@ -22,6 +22,7 @@ public class Lamp : MonoBehaviour
     public void Light()
     {
         sparks.Play();
+        sparks.Emit(20);
         GetComponent<Animator>().Play("Lit");
         light.SetActive(true);
     }

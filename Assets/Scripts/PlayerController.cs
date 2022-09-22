@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("DirX", Direction.x);
         if (attacking)
         {
-            rb.velocity = new Vector2(transform.localScale.x * -1 * speed * 0.05f, 0);
+            rb.velocity = new Vector2( dir.x * speed * 0.05f, 0);
         }
         else
         {
