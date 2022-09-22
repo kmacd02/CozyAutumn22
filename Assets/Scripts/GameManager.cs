@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private List<Lamp> lamps;
 
     public static float time = 0f;
+    [SerializeField] private ClockUI clock;
     
     // Start is called before the first frame update
     void Awake()
