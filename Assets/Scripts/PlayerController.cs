@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private bool attacking = false;
 
     [SerializeField] private int maxHealth = 5;
-    private int health = 5;
+    [NonSerialized] public int health = 5;
     
     [SerializeField] private float speed = 5f;
     
