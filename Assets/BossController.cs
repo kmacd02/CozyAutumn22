@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
+    private Animator animator;
+    
     [SerializeField] private BossHand claw1;
     [SerializeField] private BossHand claw2;
     
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating(nameof(handAttack), 0, 20f);
+        animator = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.player.transform.position.x > transform.position.x)
-        {
-            
-        }
+        flipSprite(GameManager.player.transform.position.x > transform.position.x);
+    }
+
+    void flipSprite(bool b)
+    {
+        claw1.gameObject.GetComponent<SpriteRenderer>().flipX = b;
+        claw2.gameObject.GetComponent<SpriteRenderer>().flipX = b;
+        GetComponent<SpriteRenderer>().flipX = b;
     }
 
     void handAttack()
@@ -32,5 +39,10 @@ public class BossController : MonoBehaviour
         claw1.StartAttack();
         yield return new WaitForSeconds(1f);
         claw2.StartAttack();
+    }
+
+    void snowAttack()
+    {
+        animator.Play("SnowAttack");
     }
 }

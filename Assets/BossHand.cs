@@ -32,7 +32,7 @@ public class BossHand : MonoBehaviour
 
         if (curState == States.Attacking)
         {
-            transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * 4);
+            transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * 3);
             if (Vector3.Distance(transform.position, targetPos) < 0.1f)
             {
                 curState = States.Retreating;
@@ -41,7 +41,7 @@ public class BossHand : MonoBehaviour
 
         if (curState == States.Retreating)
         {
-            transform.position = Vector3.Lerp(transform.position, startPos + transform.parent.position, Time.deltaTime * 4);
+            transform.position = Vector3.Lerp(transform.position, startPos + transform.parent.position, Time.deltaTime * 3);
             if (Vector3.Distance(transform.position, startPos + transform.parent.position) < 0.1f)
             {
                 curState = States.Bobbing;
@@ -51,7 +51,7 @@ public class BossHand : MonoBehaviour
 
     public void StartAttack()
     {
-        targetPos = GameManager.player.transform.position;
+        targetPos = GameManager.player.transform.position + (GameManager.player.transform.position - transform.position).normalized * 4f;
         curState = States.Attacking;
     }
 
