@@ -18,6 +18,8 @@ public class EnemyController : MonoBehaviour
     {
         aiPath = GetComponent<AIPath>();
         animator = GetComponent<Animator>();
+
+        GetComponent<AIDestinationSetter>().target = GameManager.player.transform;
     }
 
     // Update is called once per frame
