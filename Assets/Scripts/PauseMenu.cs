@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
     [SerializeField] public GameObject PauseMenuUI;
+
+    private void Start()
+    {
+        Resume();
+    }
 
     // Update is called once per frame
     void Update()
@@ -32,11 +39,6 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-    }
-
-    public void LoadMenu()
-    {
-        Debug.Log("Loading menu...");
     }
 
     public void QuitGame()
