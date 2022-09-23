@@ -67,5 +67,11 @@ public class Lantern : MonoBehaviour
             hits.Add(col.gameObject);
             hit.Play();
         }
+
+        Mechanic m = col.GetComponent<Mechanic>();
+        if (m != null)
+        {
+            m.Speak();
+        }
     }
 }
