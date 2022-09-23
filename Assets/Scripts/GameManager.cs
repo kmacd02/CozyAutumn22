@@ -41,5 +41,19 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("TimeUp");
         }
+
+        if (lamps.Count <= 0)
+        {
+            SceneManager.LoadScene("Win");
+        }
+    }
+
+    public void updateLamps(Lamp l)
+    {
+        if (lamps.Contains(l))
+        {
+            Debug.Log("test");
+            lamps.Remove(l);
+        }
     }
 }

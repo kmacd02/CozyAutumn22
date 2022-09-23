@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,17 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private bool AutoProgress = false;
+    [SerializeField] private int Seconds = 0;
+    [SerializeField] private string Scene = "";
+    
+    private void Start()
     {
-        
+        if(AutoProgress) StartCoroutine(AutoLoadScene(Scene));
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+    
 
     public void QuitGame()
     {
@@ -24,6 +24,12 @@ public class MenuManager : MonoBehaviour
 
     public void LoadScene(string s)
     {
+        SceneManager.LoadScene(s);
+    }
+    
+    public IEnumerator AutoLoadScene(string s)
+    {
+        yield return new WaitForSeconds(Seconds);
         SceneManager.LoadScene(s);
     }
 }

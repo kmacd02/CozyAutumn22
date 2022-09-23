@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TimeUp.unity
     guid: a39d583c1c6693948a426e60b6b0ddc2
+  - enabled: 1
+    path: Assets/Scenes/CutsceneB.unity
+    guid: 5d79afb1abab2614ea031528ce563972
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 7c59b4fa7076489428eb00f1bf744b97
   m_configObjects: {}

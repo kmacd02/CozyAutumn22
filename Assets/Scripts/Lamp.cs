@@ -25,5 +25,6 @@ public class Lamp : MonoBehaviour
         sparks.Emit(20);
         GetComponent<Animator>().Play("Lit");
         light.SetActive(true);
+        FindObjectOfType<GameManager>().updateLamps(this);
     }
 }
