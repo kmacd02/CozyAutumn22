@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,9 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private FuelUI _fuelUI;
     public static FuelUI fuelUI;
+
+    [SerializeField] private LampCounter _lampCounter;
+    public static LampCounter lampCounter;
     
     private List<Lamp> lamps;
     private List<Lamp> counterLamps;
@@ -32,10 +36,15 @@ public class GameManager : MonoBehaviour
         if (_fuelUI != null) fuelUI = _fuelUI;
         else fuelUI = FindObjectOfType<FuelUI>();
 
+        if (_lampCounter != null) lampCounter = _lampCounter;
+        else lampCounter = FindObjectOfType<LampCounter>();
+
         if(clock == null) clock = FindObjectOfType<ClockUI>();
 
         lamps = FindObjectsOfType<Lamp>().ToList();
         counterLamps = FindObjectsOfType<Lamp>().ToList();
+
+        lampCounter.gameObject.GetComponent<TextMeshProUGUI>().text = counterLamps.Count.ToString();
     }
 
     // Update is called once per frame
@@ -99,6 +108,7 @@ public class GameManager : MonoBehaviour
         if (counterLamps.Contains(l))
         {
             counterLamps.Remove(l);
+            lampCounter.gameObject.GetComponent<TextMeshProUGUI>().text = counterLamps.Count.ToString();
         }
     }
 }
