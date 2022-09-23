@@ -280,14 +280,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.05660379, g: 0.05660379, b: 0.05660379, a: 1}
+  m_Color: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d49d915dc69b949c1841c60b3d0e6ad6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b6ff55392eb11364f8ef9168148f63bb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -849,8 +849,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Kenzie MacDougal\n\n Project Manager, Artist, Programmer\n\n\nDaniel (Yun)
-    Tsai\n\n Programmer\n\n\nFaustine Wang\n\n Artist, UI designer\n\n\nCalvin Nguyen\n\n
-    Composer\n\n\n\nSound effects from ZAPSPLAT.com and freesound.org"
+    Tsai\n\n Programmer\n\n\nFaustine Wang\n\n Artist, UI designer\n\n\nCalvin Nguyen\n\nComposer\n\n\n\nSound
+    effects from ZAPSPLAT.com and freesound.org"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbb514e580d3b2c4da4d627d67bcb476, type: 2}
   m_sharedMaterial: {fileID: -535474688444868131, guid: bbb514e580d3b2c4da4d627d67bcb476, type: 2}
