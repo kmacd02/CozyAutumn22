@@ -10,7 +10,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private int Seconds = 0;
     [SerializeField] private string Scene = "";
     
-    private void Start()
+    private void OnEnable()
     {
         if(AutoProgress) StartCoroutine(AutoLoadScene(Scene));
     }
