@@ -21996,22 +21996,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005466984}
     m_Modifications:
-    - target: {fileID: 1997635009, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1997635009, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1997635009, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1997635009, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7889877629460728768, guid: fccc83decf8e80a499789d8da65a729f, type: 3}
       propertyPath: m_RootOrder
       value: 0

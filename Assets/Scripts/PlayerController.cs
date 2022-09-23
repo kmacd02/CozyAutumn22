@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private Lantern lantern;
+    [SerializeField] private AudioSource footsteps;
 
     public Vector2 Direction => dir;
     private Vector2 dir = Vector2.zero;
@@ -47,6 +48,14 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputValue input)
     {
         dir = input.Get<Vector2>();
+        if (dir.magnitude > 0)
+        {
+            footsteps.mute = false;
+        }
+        else
+        {
+            footsteps.mute = true;
+        }
     }
 
     public void DecrementHealth(int damage)

@@ -8,6 +8,7 @@ public class Lantern : MonoBehaviour
 {
     [SerializeField] private Light2D light;
     [SerializeField] private float maxRadius;
+    [SerializeField] private AudioSource hit;
     
     private List<GameObject> hits = new List<GameObject>();
     private Collider2D hitbox;
@@ -48,6 +49,7 @@ public class Lantern : MonoBehaviour
         {
             l.Light();
             hits.Add(col.gameObject);
+            hit.Play();
         }
         
         GasPump g = col.GetComponent<GasPump>();
@@ -55,6 +57,7 @@ public class Lantern : MonoBehaviour
         {
             pc.DecrementHealth(-999);
             hits.Add(col.gameObject);
+            hit.Play();
         }
         
         EnemyController e = col.GetComponent<EnemyController>();
@@ -62,6 +65,7 @@ public class Lantern : MonoBehaviour
         {
             e.Stun();
             hits.Add(col.gameObject);
+            hit.Play();
         }
     }
 }
