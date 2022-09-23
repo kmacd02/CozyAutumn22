@@ -51,8 +51,6 @@ public class GameManager : MonoBehaviour
             
             foreach (Lamp l in lamps)
             {
-                Debug.Log(l.inInnerRadius);
-                Debug.Log(l.inOuterRadius);
                 if (l.inOuterRadius) outer = true;
                 if (l.inInnerRadius) inner = true;
             }
@@ -67,6 +65,10 @@ public class GameManager : MonoBehaviour
             {
                 musicType = 2;
             }
+        }
+        else
+        {
+            musicType = 4;
         }
 
         for (int i = 1; i < musics.Length; i++)
