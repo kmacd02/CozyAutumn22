@@ -8,12 +8,13 @@ public class BossController : MonoBehaviour
     
     [SerializeField] private BossHand claw1;
     [SerializeField] private BossHand claw2;
+    [SerializeField] private GameObject beam;
     
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        
+        InvokeRepeating("handAttack", 0f, 10f);
     }
 
     // Update is called once per frame
@@ -21,7 +22,7 @@ public class BossController : MonoBehaviour
     {
         flipSprite(GameManager.player.transform.position.x > transform.position.x);
     }
-
+    
     void flipSprite(bool b)
     {
         claw1.gameObject.GetComponent<SpriteRenderer>().flipX = b;
