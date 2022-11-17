@@ -14,8 +14,6 @@ public class MenuManager : MonoBehaviour
     {
         if(AutoProgress) StartCoroutine(AutoLoadScene(Scene));
     }
-    
-    
 
     public void QuitGame()
     {

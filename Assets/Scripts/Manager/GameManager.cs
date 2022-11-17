@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
 
         if (counterLamps.Count <= 0)
         {
-            SceneManager.LoadScene("Win");
+            //Trigger boss fight
         }
     }
 
